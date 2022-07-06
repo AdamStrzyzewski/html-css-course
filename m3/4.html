@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        line-height: 1.5;
+        background-color: #edf2f7;
+      }
+
+      .container {
+        max-width: 1200px;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        /* needed for align content */
+        height: 100%;
+      }
+
+      .card-set {
+        display: flex;
+        /* Make a flex container multiline */
+        flex-wrap: wrap;
+        /* Set gap between rows and columns */
+        gap: 10px;
+        /* row-gap: 50px; */
+        column-gap: 10px;
+        list-style: none;
+
+        /* needed for align content */
+        height: 100%;
+
+        align-content: center;
+        /* align-content: flex-start; */
+        /* align-content: stretch; */
+        /* align-content: space-between; */
+        /* align-content: space-around; */
+        /* align-content: space-evenly; */
+      }
+
+      .item {
+        /*  Set the width of the elements  */
+        /* calc((100% - number_of_gaps_in_row * value_of_one_gap) / number_of_elements_in_row) */
+        flex-basis: calc((100% - 2 * 10px) / 3);
+        /* width: calc(33% - 20px / 3); */
+        padding: 10px;
+        background-color: #fff;
+      }
+
+      .item h2 {
+        margin-top: 0;
+        font-size: 20px;
+      }
+
+      .item p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="card-set">
+        <li class="item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+
+        <li class="item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+
+        <li class="item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+
+        <li class="item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+
+        <li class="item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+
+        <li class="item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+
+        <li class="item">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro atque
+            excepturi facilis molestias eius earum at officia velit
+            reprehenderit veritatis.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

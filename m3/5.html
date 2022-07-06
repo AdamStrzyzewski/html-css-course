@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.5;
+        font-size: 20px;
+        background-color: #edf2f7;
+      }
+
+      .container {
+        display: flex;
+        max-width: 960px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .sidebar {
+        margin-right: 24px;
+        flex-basis: 250px;
+        flex-grow: 1;
+      }
+
+      .content {
+        flex-grow: 2;
+      }
+
+      .sidebar,
+      .content {
+        height: 350px;
+        padding: 20px;
+        border-radius: 4px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">Sidebar</aside>
+      <main class="content">Main content</main>
+    </div>
+  </body>
+</html>
