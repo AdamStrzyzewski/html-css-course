@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style>
+      .thumb {
+        position: relative;
+        height: 380px;
+        width: 100%;
+        border: 2px dashed #2a2a2a;
+        border-radius: 4px;
+      }
+      .thumb > img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+      }
+      .container {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .card:nth-child(1) img {
+        object-fit: fill;
+      }
+
+      .card:nth-child(2) img {
+        object-fit: contain;
+      }
+
+      .card:nth-child(3) img {
+        object-fit: cover;
+      }
+
+      .card:nth-child(4) img {
+        object-fit: scale-down;
+        /* none */
+        /* contain */
+      }
+
+      .card:nth-child(5) img {
+        object-fit: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <figure class="base">
+      <img
+        src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg"
+        alt=""
+      />
+      <figcaption class="label">Default</figcaption>
+    </figure> -->
+
+    <div class="container">
+      <div class="card-set">
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">object-fit: fill</figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">object-fit: contain</figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">object-fit: cover</figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">object-fit: scale-down</figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="thumb">
+            <img
+              src="http://cdn.akc.org/content/article-body-image/samoyed_puppy_dog_pictures.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="label">object-fit: none</figcaption>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>

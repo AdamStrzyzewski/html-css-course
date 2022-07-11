@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+      .container {
+        display: flex;
+      }
+      .tile {
+        border: 1px dotted black;
+      }
+      .icon {
+        display: inline-flex;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        border: 1px solid black;
+        /* bez tego, widzimy tylko przezroczysty róg obrazka */
+        background-size: contain;
+      }
+      .with-bg {
+        background-color: red;
+      }
+      .with-icon {
+        background-image: url("https://cdn2.iconfinder.com/data/icons/avatars-60/5985/34-Father-512.png");
+      }
+      .with-corrupted-img {
+        background-image: url("https://cdn2.iconfinder.com/data/icons/avatars-60/5985/34-Father");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tile">
+        <p>✅ There is a background and the picture is loaded</p>
+        <span class="icon with-bg with-icon"></span>
+      </div>
+      <div class="tile">
+        <p>❌ There is a background and the picture is a wrong url</p>
+        <span class="icon with-bg with-corrupted-img"></span>
+      </div>
+      <div class="tile">
+        <p>❌ There is no background and the picture is a wrong url</p>
+        <span class="icon with-corrupted-img"></span>
+      </div>
+      <div class="tile">
+        <p>❌ There is no background and the picture is not loaded</p>
+        <span class="icon"></span>
+      </div>
+    </div>
+  </body>
+</html>

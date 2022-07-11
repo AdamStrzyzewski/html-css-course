@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style>
+      .list {
+        list-style: none;
+      }
+
+      .list-link {
+        color: currentColor;
+        text-decoration: none;
+        font-size: 32px;
+      }
+
+      /* ::after
+      ::before */
+      .list-link::before,
+      .list-link::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        display: inline-block;
+      }
+
+      .list-link::before {
+        background-image: url("https://cdn-icons-png.flaticon.com/512/599/599502.png");
+        margin-right: 10px;
+        /* transition: 0.5s; */
+      }
+
+      .list-link::after {
+        display: none;
+        margin-left: 16px;
+        background-image: url("https://cdn-icons-png.flaticon.com/512/507/507257.png");
+      }
+
+      .list-link:hover::before {
+        /* transform: scale(2) rotate(90deg); */
+      }
+
+      .list-link:hover::after {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li class="list-item">
+        <a href="" class="list-link">Home</a>
+      </li>
+      <li class="list-item">
+        <a href="" class="list-link">Portfolio</a>
+      </li>
+      <li class="list-item">
+        <a href="" class="list-link">Team</a>
+      </li>
+      <li class="list-item">
+        <a href="" class="list-link">About</a>
+      </li>
+    </ul>
+  </body>
+</html>

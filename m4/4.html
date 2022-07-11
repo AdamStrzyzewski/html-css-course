@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --wrapper-width: 480px;
+        --add-to-content: 50px;
+      }
+
+      .wrapper {
+        width: var(--wrapper-width);
+        height: var(--wrapper-width);
+        border: 1px solid black;
+        background: red url("https://image.ibb.co/mjdbZ5/bg5.jpg") no-repeat
+          center;
+        margin-bottom: 10px;
+      }
+
+      .custom {
+        background-size: 200px auto;
+        background-size: auto 300px;
+        background-size: 200px 300px;
+      }
+
+      .cover {
+        background-size: cover;
+      }
+      .contain {
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper custom">
+      <p class="label">Custom</p>
+    </div>
+    <div class="wrapper auto">
+      <p class="label">Auto</p>
+    </div>
+    <div class="wrapper cover">
+      <p class="label">Cover</p>
+    </div>
+    <div class="wrapper contain">
+      <p class="label">Contain</p>
+    </div>
+  </body>
+</html>
