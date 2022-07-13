@@ -1,0 +1,16 @@
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-camera {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-bin2 {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -32px;
+}
+
