@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 900px;
+        border: 2px solid black;
+      }
+      .parent-container {
+        position: relative;
+        border: 2px dotted black;
+      }
+
+      .thumb {
+        position: relative;
+        margin: 10px;
+        border-radius: 4px;
+        /* overflow: hidden; */
+        background-color: #fff;
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      }
+
+      .thumb .label {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        padding: 8px 16px;
+        font-size: 24px;
+        background-color: #2196f3;
+      }
+      /* .left-top-0 {
+        left: 0;
+        top: 0;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="parent-container">
+      <div class="container">
+        <div class="thumb">
+          <p class="label">Dog</p>
+          <!-- <p class="label left-top-0">Dog</p> -->
+          <img
+            src="https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=320"
+            alt="two-yellow-labrador-retriever-puppies"
+          />
+        </div>
+        <div class="thumb">
+          <img
+            src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&dpr=2&&w=320"
+            alt="adorable-animal-blur-cat"
+          />
+          <p class="label">Cat</p>
+        </div>
+        <div class="thumb">
+          <img
+            src="https://images.pexels.com/photos/1300361/pexels-photo-1300361.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=320"
+            alt="black-hog-prone-lying-on-soil-under-shade-of-tree"
+          />
+          <p class="label">Pig</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
