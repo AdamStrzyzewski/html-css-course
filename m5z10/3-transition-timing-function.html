@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .container {
+        border: 2px dashed #2a2a2a;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .rectangle {
+        width: 100px;
+        height: 50px;
+        /* border-radius: 50%; */
+        box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+          0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+        transform: translateX(0);
+        transition-property: transform;
+        transition-duration: 2000ms;
+        padding: 5px;
+      }
+      .container:hover .rectangle {
+        transform: translate(calc(100vw - 150px));
+      }
+      .rectangle:nth-child(1) {
+        background-color: #f44336;
+        transition-timing-function: linear;
+      }
+      .rectangle:nth-child(2) {
+        background-color: #3f51b5;
+        transition-timing-function: ease;
+      }
+      .rectangle:nth-child(3) {
+        background-color: #00bcd4;
+        transition-timing-function: ease-in;
+      }
+      .rectangle:nth-child(4) {
+        background-color: #4caf50;
+        transition-timing-function: ease-out;
+      }
+
+      .rectangle:nth-child(5) {
+        background-color: #ffeb3b;
+        transition-timing-function: ease-in-out;
+      }
+      .rectangle:nth-child(6) {
+        background-color: #e91e63;
+        transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+        /* https://cubic-bezier.com/#.17,.67,.83,.67 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rectangle">Linear</div>
+      <div class="rectangle">Ease (default)</div>
+      <div class="rectangle">Ease-in</div>
+      <div class="rectangle">Ease-out</div>
+      <div class="rectangle">Ease-in-out</div>
+      <div class="rectangle">Cubic-bezier</div>
+    </div>
+  </body>
+</html>
