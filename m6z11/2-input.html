@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <!-- :checked -->
+    <style>
+      form {
+        border: 1px dotted black;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      input:checked + label {
+        background: red;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>
+        <input type="text" name="username" placeholder="Username" />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+    <form>
+      <input type="password" name="password" minlength="5" maxlength="12" />
+      <button type="submit">Submit</button>
+    </form>
+    <form>
+      <p>choose a color</p>
+      <input id="red-input-id" type="radio" name="color" value="red" />
+      <label for="red-input-id">Red</label>
+
+      <input
+        id="green-input-id"
+        type="radio"
+        name="color"
+        value="green"
+        checked
+      />
+      <label for="green-input-id">Green</label>
+
+      <input
+        id="white-input-id"
+        type="radio"
+        name="color"
+        value="white"
+        checked
+      />
+      <label for="white-input-id">White</label>
+
+      <input id="dog-input-id" type="radio" name="species" value="dog" />
+      <label for="dog-input-id">Dog</label>
+    </form>
+    <form>
+      <p>What are your hobbies</p>
+      <ul>
+        <li>
+          <label>
+            Music
+            <input type="checkbox" name="hobby" value="music" checked />
+          </label>
+        </li>
+        <li>
+          <label>
+            Sports
+            <input type="checkbox" name="hobby" value="sports" checked />
+          </label>
+        </li>
+        <li>
+          <input
+            id="hobby-input"
+            type="checkbox"
+            name="hobby"
+            value="reading"
+          />
+          <label for="hobby-input">Reading</label>
+        </li>
+      </ul>
+      <button type="submit">Submit</button>
+      <!-- http://127.0.0.1:8080/2-input.html?hobby=music&hobby=sports&hobby=reading -->
+    </form>
+    <form>
+      <label>
+        Age
+        <input type="number" name="age" value="0" min="18" max="120" />
+      </label>
+    </form>
+    <form>
+      <label>
+        Weight
+        <input type="number" min="0" max="400" step="0.5" />
+      </label>
+    </form>
+    <form>
+      <label
+        >Phone number
+        <input
+          type="range"
+          name="phone_number"
+          value="505398345"
+          min="111111111"
+          max="999999999"
+        />
+        <p>Selected value <span class="js-selected-value">505-398-345</span></p>
+      </label>
+    </form>
+    <form>
+      <label>
+        Phone number (the right way)
+        <input type="tel" name="phone_number" />
+      </label>
+    </form>
+    <form>
+      <label>
+        Date: <input type="date" min="1920-01-01" max="2022-01-01" />
+      </label>
+      <label>
+        Time
+        <input type="time" />
+      </label>
+      <br />
+      <br />
+      <label>
+        date and Time
+        <input type="datetime-local" />
+      </label>
+    </form>
+
+    <form>
+      <label>
+        file
+        <input type="file" />
+      </label>
+    </form>
+
+    <form>
+      <label>
+        best color
+        <input type="color" />
+      </label>
+    </form>
+
+    <script>
+      const rangeInput = document.querySelector('input[type="range"]');
+      const output = document.querySelector(".js-selected-value");
+      rangeInput.addEventListener("input", (e) => {
+        let formattedPhoneNumber = e.target.value.split("");
+        formattedPhoneNumber.splice(3, 0, "-");
+        formattedPhoneNumber.splice(7, 0, "-");
+        formattedPhoneNumber = formattedPhoneNumber.join("");
+        output.textContent = formattedPhoneNumber;
+      });
+    </script>
+  </body>
+</html>
