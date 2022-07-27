@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #2a2a2a;
+      }
+
+      form {
+        border: 2px dashed black;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      input {
+        padding: 8px;
+        font-family: inherit;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
+
+      button {
+        display: inline-flex;
+        padding: 12px 32px;
+        border: none;
+        border-radius: 4px;
+        background-color: #2196f3;
+        color: #fff;
+        font-size: inherit;
+        cursor: pointer;
+        transition: background-color 500ms;
+      }
+
+      button:hover,
+      button:focus {
+        background-color: #1976d2;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>
+        Username
+        <!-- regular expressions / regex -->
+        <!-- https://regexr.com/ -->
+        <input
+          type="text"
+          name="text"
+          required
+          pattern="^[a-zA-Z]{1,6}\s[a-zA-Z]{1,9}$"
+          title="Username must be two words separated by space"
+        />
+      </label>
+      <label>
+        Password
+        <input
+          type="text"
+          name="password"
+          required
+          minlength="6"
+          maxlength="12"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+          pattern-with-two-capital-letters="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]{2})(?!.*\s).*$"
+          title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number and no spaces"
+        />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+    <form>
+      <label>
+        <span>How many pizzas do you want?</span>
+        <input type="number" name="pizzaAmount" required min="1" max="10" />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+    <form>
+      <label>
+        Username
+        <input
+          type="text"
+          name="username"
+          required
+          minlength="3"
+          maxlength="5"
+        />
+      </label>
+
+      <label>
+        Password
+        <input type="Password" name="Password" required />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <form>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Password
+        <input type="Password" name="Password" required />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

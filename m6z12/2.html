@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #2a2a2a;
+      }
+
+      form {
+        border: 2px dashed black;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      input {
+        padding: 8px;
+        font-family: inherit;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
+
+      button {
+        display: inline-flex;
+        padding: 12px 32px;
+        border: none;
+        border-radius: 4px;
+        background-color: #2196f3;
+        color: #fff;
+        font-size: inherit;
+        cursor: pointer;
+        transition: background-color 500ms;
+      }
+
+      button:hover,
+      button:focus {
+        background-color: #1976d2;
+      }
+
+      .btn:enabled {
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+          0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+      }
+      .btn:disabled {
+        background-color: lightgray;
+      }
+      .form-field {
+        display: flex;
+      }
+      .form-field input {
+        appearance: none;
+      }
+
+      .form-label {
+        position: relative;
+      }
+      .form-label:before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        border: 1px solid black;
+        left: -20px;
+        top: 8px;
+      }
+      .form-input + .form-label {
+        color: blue;
+      }
+      .form-input:checked + .form-label:before {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="form-field">
+        <input
+          type="checkbox"
+          class="form-input"
+          name="hobby"
+          value="sports"
+          id="sports"
+        />
+        <label class="form-label" for="sport">Sports</label>
+      </div>
+      <div class="form-field">
+        <input
+          type="checkbox"
+          class="form-input"
+          name="hobby"
+          value="music"
+          id="music"
+          checked
+        />
+        <label class="form-label" for="music">Music</label>
+      </div>
+
+      <div class="form-field">
+        <input
+          type="checkbox"
+          class="form-input"
+          name="hobby"
+          value="books"
+          id="books"
+        />
+        <label class="form-label" for="books">Books</label>
+      </div>
+    </form>
+    <form>
+      <button class="btn">Active button</button>
+      <button class="btn" disabled>Disabled button</button>
+    </form>
+  </body>
+</html>

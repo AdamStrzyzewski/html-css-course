@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        color: #2a2a2a;
+      }
+
+      form {
+        border: 2px dashed black;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      input {
+        padding: 8px;
+        font-family: inherit;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
+
+      button {
+        display: inline-flex;
+        padding: 12px 32px;
+        border: none;
+        border-radius: 4px;
+        background-color: #2196f3;
+        color: #fff;
+        font-size: inherit;
+        cursor: pointer;
+        transition: background-color 500ms;
+      }
+
+      button:hover,
+      button:focus {
+        background-color: #1976d2;
+      }
+
+      .btn:enabled {
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+          0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+      }
+      .btn:disabled {
+        background-color: lightgray;
+      }
+      .form-input {
+        appearance: none;
+        border: none;
+        background-color: #1976d2;
+      }
+
+      .form-input:in-range {
+        background-color: green;
+      }
+
+      .form-input:out-of-range {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        type="number"
+        required
+        min="1"
+        max="10"
+        step="1"
+        value="0"
+        name="amount-1"
+        id="amount-1"
+        class="form-input"
+      />
+      <label for="amount-1" class="form-label"
+        >How many pizzas do you want to order?</label
+      >
+
+      <input
+        type="number"
+        required
+        min="1"
+        max="20"
+        step="1"
+        value="0"
+        name="amount-2"
+        id="amount-2"
+        class="form-input"
+      />
+      <label for="amount-2" class="form-label"
+        >How many pizzas do you want to order?</label
+      >
+    </form>
+  </body>
+</html>
