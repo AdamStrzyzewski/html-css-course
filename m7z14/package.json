@@ -1,0 +1,24 @@
+{
+  "name": "m7z14",
+  "version": "1.0.0",
+  "description": "node.js - instalacja tego z ich strony https://nodejs.org/en/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss-w": "node-sass-chokidar scss/index.scss -o css -r -w --source-map true --output-style compressed",
+    "scss-prod": "node-sass-chokidar scss/index.scss -o css --ext min.css --output-style compressed | npm run prefix",
+    "prefix": "postcss css/index.min.css --use=autoprefixer --autoprefixer.browsers 'last 4 versions' --annotation=false --output=css/dist/index.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "css": "^3.0.0",
+    "live-server": "^1.2.2",
+    "node-sass": "^7.0.1",
+    "node-sass-chokidar": "^2.0.0",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
+  }
+}

@@ -1,0 +1,18 @@
+@mixin bordered($color, $size) {
+  border-top: $size solid $color;
+  border-bottom: $size solid $color;
+  border-left: $size solid $color;
+}
+
+.section {
+  @include bordered(black, 3px);
+}
+
+.header {
+  @include bordered(red, 4px);
+}
+
+.article {
+  $primaryColor: red;
+  @include bordered($primaryColor, 10px);
+}

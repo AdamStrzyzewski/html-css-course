@@ -1,0 +1,14 @@
+$primaryColor: red;
+
+body {
+  $primaryColor: blue;
+  background: $primaryColor;
+}
+
+p {
+  color: $primaryColor;
+}
+
+// span {
+//   color: $secondaryColor;
+// }

@@ -1,0 +1,14 @@
+$value: 10;
+
+.box {
+  //   width: calc(960px + 10%);
+  // width: 960px + 10% // błąd
+  width: (960px + 30px);
+  width: 100% + 20%;
+  width: 960px - 30px;
+  width: 960px * 30;
+  width: (100px / 5);
+  width: 100px / $value;
+  width: 100px / 5 - 10px;
+  width: 100px * $value;
+}

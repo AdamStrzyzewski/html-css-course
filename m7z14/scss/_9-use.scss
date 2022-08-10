@@ -1,0 +1,29 @@
+// _
+// -
+// @use private variables
+$-radius: 3px;
+$_radius: 3px;
+
+// _button.scss
+
+$radius: 0.5rem;
+
+@mixin buttonSmall {
+  border-radius: $radius;
+  padding: 1rem;
+}
+
+// _box.scss
+@use "button";
+
+.boxButton {
+  @include button.buttonSmall;
+  margin: 1rem + button.$radius;
+}
+
+// _box.scss
+@use "button" as *;
+
+.boxButton {
+  @include buttonSmall;
+}

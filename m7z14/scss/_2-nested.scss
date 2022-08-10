@@ -1,0 +1,61 @@
+.button {
+  color: red;
+  &:hover {
+    color: blue;
+  }
+}
+
+.button__icon {
+  &:hover {
+    background-color: teal;
+  }
+}
+
+.button {
+  color: red;
+  &:hover {
+    color: blue;
+    .button__icon {
+      background-color: teal;
+    }
+    .button__label {
+      font-size: 20px;
+    }
+  }
+}
+
+.link {
+  color: black;
+
+  &:hover {
+    color: red;
+  }
+
+  &:hover,
+  &:focus {
+    color: green;
+  }
+}
+
+// bem
+.section {
+  width: 100%;
+
+  &__title {
+    color: red;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}
+
+.section {
+  width: 100%;
+  .title {
+    color: red;
+  }
+  .text {
+    font-size: 14px;
+  }
+}
