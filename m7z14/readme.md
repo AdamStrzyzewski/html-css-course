@@ -13,6 +13,6 @@ npm install
 npm run scss-w 
 korzystając z mojego package.json
 
-
+npm run scss-w - odpalamy i obserwujemy pliki na bieżąco
 npm run prefix
 npm run scss-prod

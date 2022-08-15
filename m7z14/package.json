@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss-w": "node-sass-chokidar scss/index.scss -o css -r -w --source-map true --output-style compressed",
+    "scss-w": "node-sass-chokidar scss/index.scss -o css -r -w --source-map true --output-style expanded",
     "scss-prod": "node-sass-chokidar scss/index.scss -o css --ext min.css --output-style compressed | npm run prefix",
     "prefix": "postcss css/index.min.css --use=autoprefixer --autoprefixer.browsers 'last 4 versions' --annotation=false --output=css/dist/index.min.css"
   },

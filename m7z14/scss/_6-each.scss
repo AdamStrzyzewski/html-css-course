@@ -4,12 +4,22 @@ $animals: dog, cat, bird, turtle, elephant, a, b, c, d, e, f, g;
   background-image: url("../images/#{$url}.png");
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  @each $animal in $animals {
-    .#{$animal}-icon {
-      @include backgroundImg($animal);
-    }
+// .icon {
+//   width: 50px;
+//   height: 50px;
+//   @each $animal in $animals {
+//     .#{$animal}-icon {
+//       @include backgroundImg($animal);
+//     }
+//   }
+// }
+
+@each $animal in $animals {
+  $i: index($animals, $animal);
+  // index($animals, dog) => 1
+  // index($animals, cat) => 2
+  // itp itd etc
+  .cube:nth-child(#{$i}) {
+    @include backgroundImg($animal);
   }
 }
