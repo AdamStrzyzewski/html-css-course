@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+  </head>
+  <body>
+    Rzutnia (viewport) - to widoczny, prostokątny obszar strony internetowej, który nie obejmuje paska adresu, paska zakładek i innych elementów usługowych przeglądarki.
+
+Rzutnia
+Przeglądarki mobilne renderują stronę internetową w widocznym obszarze, który jest szerszy niż fizyczny ekran urządzenia. Domyślnie szerokość obszaru (rzutni) w przeglądarkach mobilnych zależy od producenta urządzenia, nie odpowiada rozmiarowi ekranu urządzenia i najczęściej wynosi 980px. Oznacza to, że przeglądarka mobilna traktuje ten rozmiar jako rozmiar, względem którego powinna stosować zapytania o media.
+
+Wirtualna rzutnia urządzenia mobilnego
+Oznacza to, że zapytania o media przeznaczone do urządzeń mobilnych po prostu nie zostaną zastosowane lub zostaną ponownie nadpisane w przeglądarce mobilnej. Na przykład podczas otwierania strony internetowej na ekranie o szerokości 400px, zostanie zastosowane zapytanie o media z min-width: 768px nadpisując style mobilne i zobaczymy wersję strony przeznaczoną dla tabletów, chociaż ona została otwarta w telefonie.
+
+Strony przystosowane do przeglądania na różnych urządzeniach muszą zawierać w sekcji <head> metaznacznik viewport. On informuje przeglądarkę, jak kontrolować rozmiar i skalę rzutni.
+
+
+width=device-width - ustawia szerokość widocznego obszaru (width), która jest równa fizycznej szerokości ekranu urządzenia (device-width).
+initial-scale=1.0 - ustawia stosunek (skalę) 1:1 między pikselami CSS a pikselami sprzętowymi urządzenia.
+
+This is done because not all pages are optimized for mobile and break (or at least look bad) when rendered at a small viewport width. This virtual viewport is a way to make non-mobile-optimized sites in general look better on narrow screen devices.
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: green;
+        transition: background-color 1s;
+        color: red;
+      }
+
+      /* @media (min-width: 800px) {
+        body {
+          background-color: orange;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        body {
+          background-color: red;
+        }
+      } */
+      /* min-height, max-height */
+
+      @media print {
+        body {
+          background-color: black;
+          color: white;
+        }
+      }
+
+      @media screen {
+        body {
+          color: blue;
+        }
+      }
+
+      /* AND albo OR (,) */
+      /* NOT */
+      /* screen
+      min-width 400px
+      max width 800px
+      */
+
+      /* @media screen and (min-width: 600px) and (max-width: 1000px) {
+        body {
+          background-color: cyan;
+        }
+      } */
+
+      @media (max-width: 600px), (min-width: 900px) {
+        body {
+          background-color: orange;
+        }
+      }
+
+      @media not (max-width: 600px) {
+        body {
+          background-color: red;
+        }
+      }
+
+      @media not screen and (max-width: 500px) {
+        body {
+          background-color: blue;
+        }
+      }
+
+      @media (min-width: 600px) {
+        body {
+          background-color: blue;
+        }
+      }
+
+      /* 
+      magic numbers are wrong
+      for (let i = 0 ; i < noOfCardsInDeck)
+      */
+    </style>
+  </head>
+  <body>
+    <h1>test</h1>
+  </body>
+</html>
